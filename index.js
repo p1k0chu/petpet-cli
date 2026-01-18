@@ -2,17 +2,19 @@ import { createCanvas, Image, loadImage } from "canvas";
 import GifEncoder from "gif-encoder";
 import { createWriteStream } from "fs";
 import { g, frames, optimizeFrameColors, handSpritePromise } from "./hand_Sprite.js"
+import {parse as parseArguments} from "./args_parser.js"
 
 const SIZE = 112;
 
-const filePath = process.argv[2];
-const userImagePromise = loadImage(filePath);
+const args = parseArguments()
+
+const userImagePromise = loadImage(args.inputFile);
 
 const canvas = createCanvas(SIZE, SIZE);
 const ctx = canvas.getContext("2d");
 
 const gif = new GifEncoder(SIZE, SIZE);
-const stream = createWriteStream("output.gif");
+const stream = createWriteStream(args.outputFile);
 gif.pipe(stream);
 
 // Configure gif settings
@@ -39,5 +41,3 @@ for (let i = 0; i < frames.length; i++) {
 
 // Finalize the GIF
 gif.finish();
-
-console.log("GIF generated: output.gif");
