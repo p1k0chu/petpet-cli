@@ -13,7 +13,17 @@
     in
     {
       devShells.${system}.default = pkgs.mkShellNoCC {
-        packages = with pkgs; [ bun ];
+        packages = with pkgs; [
+          bun
+          libuuid
+        ];
+        APPEND_LIBRARY_PATH = with pkgs; "${lib.makeLibraryPath [
+          libGL
+          libuuid
+        ]}";
+        shellHook = ''
+          export LD_LIBRARY_PATH="$APPEND_LIBRARY_PATH:$LD_LIBRARY_PATH"
+        '';
       };
     };
 }
