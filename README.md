@@ -2,13 +2,7 @@
 
 Cli program to petpet an image
 
-usage:
-
-```
-bun run index.js -- path/to/image
-```
-
-path can be a local file or url.
+run `./index.js -h` to see usage
 
 # Attribution
 
