@@ -16,6 +16,8 @@
         packages = with pkgs; [
           bun
           libuuid
+          prettier
+          vscode-langservers-extracted
         ];
         APPEND_LIBRARY_PATH = with pkgs; "${lib.makeLibraryPath [
           libGL
