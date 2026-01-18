@@ -1,5 +1,6 @@
 {
   "name": "petpet-cli",
+  "version": "0.1.0",
   "module": "index.ts",
   "private": true,
   "type": "module",
