@@ -5,7 +5,7 @@ ${process.argv[1]} -o output input
 
 args:
 -o : path to output gif file
-input: path to input image
+input: path to input image (can be local file or url)
 `)
 }
 
