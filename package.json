@@ -1,0 +1,6 @@
+{
+  "name": "petpet-cli",
+  "module": "index.ts",
+  "private": true,
+  "type": "module"
+}
