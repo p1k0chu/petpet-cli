@@ -1,4 +1,7 @@
 import {loadImage} from "canvas"
+import {join} from "node:path";
+
+const __dirname = import.meta.dir;
 
 export const g = {
   x: 18,
@@ -51,5 +54,5 @@ export function optimizeFrameColors(data) {
   }
 }
 
-export const handSpritePromise = loadImage("img/sprite.png");
+export const handSpritePromise = loadImage(join(__dirname, "img/sprite.png"));
 

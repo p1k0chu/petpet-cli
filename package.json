@@ -3,6 +3,9 @@
   "module": "index.ts",
   "private": true,
   "type": "module",
+  "bin": {
+      "petpet-cli": "index.js"
+  },
   "dependencies": {
     "canvas": "^3.2.1",
     "gif-encoder": "^0.7.2"

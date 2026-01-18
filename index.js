@@ -1,3 +1,5 @@
+#!/usr/bin/env bun
+
 import { createCanvas, Image, loadImage } from "canvas";
 import GifEncoder from "gif-encoder";
 import { createWriteStream } from "fs";
