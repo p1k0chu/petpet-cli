@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "canvas": "^3.2.1"
+      "canvas": "^3.2.1",
+      "gif-encoder": "^0.7.2"
   }
 }
